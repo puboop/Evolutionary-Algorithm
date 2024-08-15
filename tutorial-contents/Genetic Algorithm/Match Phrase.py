@@ -56,11 +56,11 @@ class GA(object):
 
     def crossover(self, parent, pop):
         if np.random.rand() < self.cross_rate:
-            # 随机索引
+            # 随机索引 随机选择一个妈妈
             i_ = np.random.randint(0, self.pop_size, size=1)  # select another individual from pop
             # 随机出种群bool索引值
             cross_points = np.random.randint(0, 2, self.DNA_size).astype(np.bool)  # choose crossover points
-            # 根据bool索引值将打乱顺序后的dna赋值给当前的父dna
+            # 根据bool索引值将打乱顺序后的dna赋值给当前的父dna 繁衍后代啦
             parent[cross_points] = pop[i_, cross_points]  # mating and produce one child
         return parent
 
@@ -72,7 +72,7 @@ class GA(object):
         return child
 
     def evolve(self):
-        # 打乱种群
+        # 打乱种群 生成爸爸
         pop = self.select()
         pop_copy = pop.copy()
         for parent in pop:  # for every parent
