@@ -9,6 +9,7 @@ import matplotlib.pyplot as plt
 DNA_SIZE = 1  # DNA (real number)
 DNA_BOUND = [0, 5]  # solution upper and lower bounds
 N_GENERATIONS = 200
+# 初始步长（动态突变强度）
 MUT_STRENGTH = 5.  # initial step size (dynamic mutation strength)
 
 
@@ -21,12 +22,15 @@ def get_fitness(pred): return pred.flatten()
 
 def make_kid(parent):
     # no crossover, only mutation
+    # 进行变异
     k = parent + MUT_STRENGTH * np.random.randn(DNA_SIZE)
+    #　窗口剪切
     k = np.clip(k, *DNA_BOUND)
     return k
 
 
 def kill_bad(parent, kid):
+    # 进行优胜劣汰的淘汰机制
     global MUT_STRENGTH
     fp = get_fitness(F(parent))[0]
     fk = get_fitness(F(kid))[0]
