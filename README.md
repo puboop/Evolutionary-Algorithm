@@ -5,7 +5,7 @@
 [graphviz离线安装](./file/windows_10_cmake_Release_graphviz-install-12.1.0-win64.exe)
 添加到环境变量中
 
-Python 3.6.13 
+Python 3.5.6
 
 
 
