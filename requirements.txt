@@ -52,3 +52,5 @@ Werkzeug==2.0.3
 wincertstore==0.2
 wrapt==1.12.1
 zipp==3.6.0
+
+neat-python==0.92

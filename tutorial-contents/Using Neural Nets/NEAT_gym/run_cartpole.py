@@ -9,7 +9,7 @@ import numpy as np
 import gym
 import visualize
 
-GAME = 'CartPole-v0'
+GAME = 'CartPole-v1'
 env = gym.make(GAME).unwrapped
 
 CONFIG = "./config"

@@ -1,3 +1,14 @@
+# 环境依赖
+
+[graphviz在线下载安装](https://graphviz.org/download/)
+
+[graphviz离线安装](./file/windows_10_cmake_Release_graphviz-install-12.1.0-win64.exe)
+添加到环境变量中
+
+Python 3.6.13 
+
+
+
 <p align="center">
     <a href="EA.jpg?raw=true" target="_blank">
     <img width="40%" src="EA.jpg" style="max-width:100%;">
